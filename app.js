@@ -3,13 +3,13 @@ const app = express ();
 const files = require ('./auctions.json');
 const cors = require ('cors');
 
-app.use (cors());
+app.use (cors ());
 
 app.get ('/', (req, res) => {
   res.send (files);
 });
 
-app.post ('/:id', (req, res) => {
+app.post ('/', (req, res) => {
   res.send ('got a post request');
 });
 

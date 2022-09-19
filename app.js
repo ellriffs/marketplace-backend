@@ -10,11 +10,8 @@ app.get ('/', (req, res) => {
 });
 
 app.post ('/', (req, res) => {
-  let id = req.body.id;
-  let item = req.body.item;
-  let price = req.body.price;
-  let image = req.body.image;
-  res.send ({id, item, price, image});
+  const {id, item, price, image} = req.body;
+  console.log (id, item, price, image);
 });
 
 app.delete ('/:id', (req, res) => {

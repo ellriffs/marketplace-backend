@@ -14,6 +14,10 @@ app.delete ('/:id', (req, res) => {
   res.send ('got a delete request');
 });
 
-app.listen (process.env.PORT || 8080, () => {
-  console.log (`app is listening on ${port}`);
+app.listen (process.env.PORT || 3000, function () {
+  console.log (
+    'Express server listening on port %d in %s mode',
+    this.address ().port,
+    app.settings.env
+  );
 });

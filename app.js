@@ -10,7 +10,7 @@ app.get ('/', (req, res) => {
 });
 
 app.post ('/', (req, res) => {
-  res.send ('got a post request');
+  res.send (req.body);
 });
 
 app.delete ('/:id', (req, res) => {

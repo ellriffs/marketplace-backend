@@ -1,6 +1,5 @@
 const express = require ('express');
 const app = express ();
-const port = 8080;
 const files = require ('./auctions.json');
 
 app.get ('/', (req, res) => {
@@ -15,6 +14,6 @@ app.delete ('/:id', (req, res) => {
   res.send ('got a delete request');
 });
 
-app.listen (port, () => {
+app.listen (process.env.port || 8080, () => {
   console.log (`app is listening on ${port}`);
 });

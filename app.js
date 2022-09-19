@@ -2,17 +2,16 @@ const express = require ('express');
 const app = express ();
 const files = require ('./auctions.json');
 const cors = require ('cors');
-const bodyParser = require ('body-parser');
-app.use (bodyParser.urlencoded ({extended: true}));
 
 app.use (cors ());
+app.use (express.json ());
 
 app.get ('/', (req, res) => {
   res.send (files);
 });
 
 app.post ('/', (req, res) => {
-  res.send ('post request successfull ');
+  res.send (JSON.stringify (req.body));
 });
 
 app.delete ('/:id', (req, res) => {

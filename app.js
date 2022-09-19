@@ -11,7 +11,7 @@ app.get ('/', (req, res) => {
 
 app.post ('/', (req, res) => {
   const {id, item, price, image} = req.body;
-  console.log (id, item, price, image);
+  res.send (id, item, price, image);
 });
 
 app.delete ('/:id', (req, res) => {

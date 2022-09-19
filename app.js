@@ -3,7 +3,7 @@ const app = express ();
 const files = require ('./auctions.json');
 const cors = require ('cors');
 const bodyParser = require ('body-parser');
-app.use (bodyParser);
+app.use (bodyParser.urlencoded ({extended: true}));
 
 app.use (cors ());
 

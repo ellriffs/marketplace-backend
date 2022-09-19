@@ -2,6 +2,8 @@ const express = require ('express');
 const app = express ();
 const files = require ('./auctions.json');
 const cors = require ('cors');
+const bodyParser = require ('body-parser');
+app.use (bodyParser);
 
 app.use (cors ());
 
@@ -10,7 +12,7 @@ app.get ('/', (req, res) => {
 });
 
 app.post ('/', (req, res) => {
-  res.status (200).res.send (req.body);
+  console.log (req.body);
 });
 
 app.delete ('/:id', (req, res) => {

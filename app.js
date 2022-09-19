@@ -11,7 +11,8 @@ app.get ('/', (req, res) => {
 
 app.post ('/', (req, res) => {
   const {id, item, price, image} = req.body;
-  res.send (id, item, price, image);
+  const body = json.parse (req.body);
+  res.send ({...body});
 });
 
 app.delete ('/:id', (req, res) => {

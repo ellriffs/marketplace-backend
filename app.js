@@ -6,7 +6,7 @@ const {getAllItems} = require ('./controllers/app.controller');
 app.use (cors ());
 app.use (express.json ());
 
-app.get ('/api', getAllItems);
+app.get ('/', getAllItems);
 
 app.use ((err, req, res, next) => {
   if (err.status) {

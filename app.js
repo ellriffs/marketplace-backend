@@ -1,12 +1,13 @@
 const cors = require ('cors');
 const express = require ('express');
 const app = express ();
-const {getAllItems} = require ('./controllers/app.controller');
+const {getAllItems, addNewItem} = require ('./controllers/app.controller');
 
 app.use (cors ());
 app.use (express.json ());
 
 app.get ('/', getAllItems);
+app.post ('/:id', addNewItem);
 
 app.use ((err, req, res, next) => {
   if (err.status) {
@@ -14,15 +15,6 @@ app.use ((err, req, res, next) => {
   } else {
     next (err);
   }
-});
-
-app.use ((err, req, res, nex) => {
-  res.status (400).send ({msg: 'Bad request'});
-});
-
-app.use ((err, req, res, next) => {
-  console.log (err);
-  res.status (500).send ({msg: 'internal server error'});
 });
 
 module.exports = app;

@@ -1,0 +1,26 @@
+module.exports = [
+  {
+    id: 1,
+    item_name: 'Mountain Bike',
+    item_price: 300,
+    image_url: 'https://contents.mediadecathlon.com/p1576546/k$ebf183fa52154fc8365f847015f0c373/sq/275-inch-mountain-bike-rockrider-st-100-grey.jpg?f=960x960',
+  },
+  {
+    id: 2,
+    item_name: 'Jumper',
+    item_price: 20,
+    image_url: 'https://img.ltwebstatic.com/images3_pi/2021/08/17/16291637710c76231baceddd4ec365d235fdf4263f.webp',
+  },
+  {
+    id: 3,
+    item_name: 'Lampshade',
+    item_price: 10,
+    image_url: 'https://images.dunelm.com/30214978.jpg?$standardplayerzoom$&img404=noimagedefault',
+  },
+  {
+    id: 4,
+    item_name: 'Laptop',
+    item_price: 60,
+    image_url: 'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_3420/media_gallery/peripherals_laptop_latitude_3420nt_gallery_1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3319&hei=2405&qlt=100,0&resMode=sharp2&size=3319,2405',
+  },
+];

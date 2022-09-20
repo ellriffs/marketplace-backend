@@ -1,0 +1,1 @@
+exports.auctionData = require ('./auctionData');

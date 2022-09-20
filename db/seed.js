@@ -27,7 +27,6 @@ const seed = data => {
           data.image_url,
         ])
       );
-      console.log (queryStr);
       return db.query (queryStr);
     });
 };

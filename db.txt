@@ -1,0 +1,9 @@
+You are now connected to database "elliotsmarketplacedb" as user "elliotrobertson".
+ id |   item_name   | item_price |                                                                                                                                                image_url                                                                                                                                                 
+----+---------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | Mountain Bike |        300 | https://contents.mediadecathlon.com/p1576546/k$ebf183fa52154fc8365f847015f0c373/sq/275-inch-mountain-bike-rockrider-st-100-grey.jpg?f=960x960
+  2 | Jumper        |         20 | https://img.ltwebstatic.com/images3_pi/2021/08/17/16291637710c76231baceddd4ec365d235fdf4263f.webp
+  3 | Lampshade     |         10 | https://images.dunelm.com/30214978.jpg?$standardplayerzoom$&img404=noimagedefault
+  4 | Laptop        |         60 | https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_3420/media_gallery/peripherals_laptop_latitude_3420nt_gallery_1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3319&hei=2405&qlt=100,0&resMode=sharp2&size=3319,2405
+(4 rows)
+

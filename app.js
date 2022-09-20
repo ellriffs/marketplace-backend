@@ -1,27 +1,31 @@
-const express = require ('express');
-const app = express ();
-const files = require ('./auctions.json');
-const cors = require ('cors');
+const cors = require('cors');
+const express = require('express');
+const app = express();
+const {
+getAllItems
+} = require('./controllers/app.controller');
 
-app.use (cors ());
-app.use (express.json ());
+app.use(cors());
+app.use(express.json());
 
-app.get ('/', (req, res) => {
-  res.send (files);
+app.get('/', getAllItems)
+
+
+app.use((err, req, res, next) => {
+  if (err.status) {
+    res.status(err.status).send({msg: err.msg});
+  } else {
+    next(err);
+  }
 });
 
-app.post ('/', (req, res) => {
-  res.send (JSON.stringify (req.body));
+app.use((err, req, res, nex) => {
+  res.status(400).send({msg: 'Bad request'});
 });
 
-app.delete ('/:id', (req, res) => {
-  res.send ('got a delete request');
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.status(500).send({msg: 'internal server error'});
 });
 
-app.listen (process.env.PORT || 3000, function () {
-  console.log (
-    'Express server listening on port %d in %s mode',
-    this.address ().port,
-    app.settings.env
-  );
-});
+module.exports = app;
